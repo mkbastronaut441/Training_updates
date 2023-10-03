@@ -57,9 +57,11 @@ problemloop:
 		go func() {
 			//giving the answer to the question as user input
 			var answer string
+
 			fmt.Scanf("%s\n", &answer)
 			answerCh <- answer
 		}()
+		//changes
 
 		select {
 		case <-timer.C:
